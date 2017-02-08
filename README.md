@@ -1,2 +1,2 @@
 # myProjects
-Learning new things
+Learning things
