@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextName"
+        android:layout_margin="7dp"
+        android:id="@+id/recyclerview"
+        android:layout_marginBottom="5dp"
+        android:background="#97c5f2d8"
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/editTextAddress"
+        android:background="#d6d3d3"
+        android:hint="Enter name"
+        android:fontFamily="monospace"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="match_parent"
+        android:hint="Enter Rollno"
+        android:fontFamily="monospace"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonSave"
+        android:background="#d6d3d3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/buttonSave"
+        android:text="Create"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#c2f5cae2"/>
+
+
+
+</RelativeLayout>

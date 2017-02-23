@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "296286957925",
+    "firebase_url": "https://samplefirebase-adcaa.firebaseio.com",
+    "project_id": "samplefirebase-adcaa",
+    "storage_bucket": "samplefirebase-adcaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296286957925:android:0941115730687acb",
+        "android_client_info": {
+          "package_name": "com.akitsme.firebasetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296286957925-27nitrlf75e4k9iibjvmabn0p258a06f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoublxh_0MUslmptR67o7EocdzDQaqVso"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
