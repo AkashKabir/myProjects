@@ -2,6 +2,7 @@ package com.akitsme.firebasetest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextAddress;
     private Button buttonSave;
     private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<Person> arrayList= new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +35,11 @@ public class MainActivity extends AppCompatActivity {
             buttonSave = (Button) findViewById(R.id.buttonSave);
             editTextName = (EditText) findViewById(R.id.editTextName);
             editTextAddress = (EditText) findViewById(R.id.editTextAddress);
-            textViewPersons = (TextView) findViewById(R.id.textViewPersons);
             recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
-
+            mLayoutManager = new LinearLayoutManager(this);
+            recyclerView.setLayoutManager(mLayoutManager);
+           // arrayList.clear();
+             //recyclerView.setAdapter(new customAdapter(arrayList));
             buttonSave.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -65,16 +69,19 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void onDataChange(com.firebase.client.DataSnapshot snapshot) {
+                            arrayList.clear();
+                            //recyclerView.getAdapter().notifyDataSetChanged();
                             for (com.firebase.client.DataSnapshot postSnapshot : snapshot.getChildren()) {
 
                                 //Getting the data from snapshot
                                 Person person = postSnapshot.getValue(Person.class);
                                 //Adding it to a string
+
                                 arrayList.add(person);
                                 //Displaying it on textview
                                 //textViewPersons.setText(string);
                             }
-                            recyclerView.setAdapter(new customAdapter(arrayList));
+                                recyclerView.setAdapter(new customAdapter(arrayList));
                         }
 
                         @Override
